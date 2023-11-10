@@ -1,6 +1,13 @@
 # opens and reads the July9.csv file and gives it a TAB delimiter
-import csv
-with open("July9.csv", newline='') as csvfile:
-    data = csv.reader(csvfile, delimiter= '\t')
-    for row in data:
-        print(', '.join(row))
+f_obj = open("July9.csv", mode = "r")
+data = f_obj.readline()
+items = data.split(",")
+weatherStation = str(items[3])
+year = (items[6])
+month = (items[7])
+for items in data:
+    print(weatherStation, year, month)
+
+
+
+    
