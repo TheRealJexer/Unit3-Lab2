@@ -1,13 +1,6 @@
-# opens and reads the July9.csv file and gives it a TAB delimiter
-with open("July9.csv") as f:
-    for line in f:
-        read = f.readline()
-        data = read.split(",")
-        days = int[data[8]]
-        print(data)
-
-
-
-
-
-    
+# reads and displays the July9.csv file as a list
+import csv
+with open("July9.csv", newline= '') as f:
+    reader = csv.reader(f)
+    data_list = list(reader)
+print(data_list)
