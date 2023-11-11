@@ -2,7 +2,8 @@
 with open("July9.csv") as f:
     for line in f:
         read = f.readline()
-        data = read.find()
+        data = read.split(",")
+        days = int[data[8]]
         print(data)
 
 
